@@ -10,11 +10,13 @@ import numeral from 'numeral';
 
 const ExpensesSummary = (props) => (
     <div>
-        <h2>
+        <h3>
             {
+                "the number of items is "+props.expenses.length+" the total amount is "+
               numeral((getExpensesTotal(props.expenses))/100).format('$0,0.00')
+
             }
-        </h2>
+        </h3>
 
     </div>
 );
