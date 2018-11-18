@@ -7,17 +7,17 @@ export const addExpense = (expense) => ({
   expense
 });
 
-export const startAddExpense=(expenseData={})=>{
-  return (dispatch)=>{
+export const startAddExpense = (expenseData = {}) => {
+  return (dispatch) => {
     const {
       description = '',
       note = '',
       amount = 0,
       createdAt = 0
-    }= expenseData;
-    const expense={description,note,amount,createdAt,createdAt};
+    } = expenseData;
+    const expense = { description, note, amount, createdAt, createdAt };
 
-    database.ref('expenses').push(expense).then((ref)=>{
+    database.ref('expenses').push(expense).then((ref) => {
       dispatch(addExpense({
         id: ref.key,
         ...expense
@@ -31,6 +31,15 @@ export const removeExpense = ({ id } = {}) => ({
   type: 'REMOVE_EXPENSE',
   id
 });
+export const startRemoveExpense = ({ id }) => {
+ return (dispatch)=>{
+          database.ref(`expenses/${id}`).remove().then(() => {
+             dispatch(removeExpense({ id }));
+        });
+    };
+};
+
+
 
 // EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
@@ -39,23 +48,31 @@ export const editExpense = (id, updates) => ({
   updates
 });
 
+export const startEditExpense = ( id, updates ) => {
+  return (dispatch)=>{
+             database.ref(`expenses/${id}`).update(updates).then(() => {
+              dispatch(editExpense( id,updates));
+         });
+     };
+ };
+
 //SET_EXPENSES
-export const setExpenses=(expenses)=>({
-  type:'SET_EXPENSES',
+export const setExpenses = (expenses) => ({
+  type: 'SET_EXPENSES',
   expenses
 })
 
-export const startSetExpenses=()=>{
-  return(dispatch)=>{
- return database.ref('expenses').once('value').then((snapshot)=>{
- const expenses=[];
- snapshot.forEach((ch)=>{
-    expenses.push({
-        id:ch.key,
-        ...ch.val()
-    });
-  });
- dispatch(setExpenses(expenses));
+export const startSetExpenses = () => {
+  return (dispatch) => {
+    return database.ref('expenses').once('value').then((snapshot) => {
+      const expenses = [];
+      snapshot.forEach((ch) => {
+        expenses.push({
+          id: ch.key,
+          ...ch.val()
+        });
+      });
+      dispatch(setExpenses(expenses));
     });
   };
 };
