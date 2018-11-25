@@ -7,8 +7,6 @@ export const Login = ({startLogin}) => (
         <h1>Login Page</h1>
       
                 <div><button onClick={startLogin} >login</button></div>
-
-       
     </div>
 );
 

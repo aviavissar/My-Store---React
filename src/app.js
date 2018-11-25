@@ -37,8 +37,9 @@ firebase.auth().onAuthStateChanged((user) => {
       }
     });
   } else {
-    store.dispatch(logout());
-    renderApp();
     history.push('/');
+    store.dispatch(logout());
+   renderApp();
+   
   }
 });
