@@ -1,0 +1,31 @@
+{
+  "products" : [{
+    "name" : "hands cream",
+    "pic" : "https://firebasestorage.googleapis.com/v0/b/my-store-faa0e.appspot.com/o/0.jpg?alt=media&token=45c4ef08-993e-4662-8ae7-d5768ec47eb7",
+    "price" : 10
+  },{
+    "name" : "Foot Cream",
+    "pic" : "https://firebasestorage.googleapis.com/v0/b/my-store-faa0e.appspot.com/o/1.jpg?alt=media&token=1f67a709-8b7d-4ea9-bb4b-2b65f9a78c92",
+    "price" : 10
+  },{
+    "name" : "Moisturizer",
+    "pic" : "https://firebasestorage.googleapis.com/v0/b/my-store-faa0e.appspot.com/o/2.jpg?alt=media&token=234e59ca-bc71-4a50-85b4-6753bc1f40a4",
+    "price" : 20
+  },{
+    "name" : "Hair spray",
+    "pic" : "https://firebasestorage.googleapis.com/v0/b/my-store-faa0e.appspot.com/o/4.jpg?alt=media&token=b6a44b51-c29c-4a66-8bc6-2251f8e79b9f",
+    "price" : 15
+  },{
+    "name" : "skin oil",
+    "pic" : "https://firebasestorage.googleapis.com/v0/b/my-store-faa0e.appspot.com/o/6.jpg?alt=media&token=5bf4c37e-b882-41ba-99ac-ab1569487593",
+    "price" : 10
+  }, {
+    "name" : "eye cream",
+    "pic" : "https://firebasestorage.googleapis.com/v0/b/my-store-faa0e.appspot.com/o/3.jpg?alt=media&token=c00d94db-f14a-4f4b-a262-fe187d63d68a",
+    "price" : 19
+  }, {
+    "name" : "body cream",
+    "pic" : "https://firebasestorage.googleapis.com/v0/b/my-store-faa0e.appspot.com/o/5.jpg?alt=media&token=4d1ba975-e4b9-4b44-9489-11c7717ab472",
+    "price" : 8
+  } ]
+}

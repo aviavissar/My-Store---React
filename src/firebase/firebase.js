@@ -1,17 +1,16 @@
 import * as firebase from 'firebase';
 
-const config = {
-    apiKey: "AIzaSyApRIvQLD8aJnPVXtje4rEbIEwMUb-3xJ4",
-    authDomain: "expensify-312ab.firebaseapp.com",
-    databaseURL: "https://expensify-312ab.firebaseio.com",
-    projectId: "expensify-312ab",
-    storageBucket: "expensify-312ab.appspot.com",
-    messagingSenderId: "915841777308"
-};
-
-firebase.initializeApp(config);
+const   config = {
+    apiKey: "AIzaSyA5JllxE7AQClqug-vFiOxLUxgcGYzBaPU",
+    authDomain: "my-store-faa0e.firebaseapp.com",
+    databaseURL: "https://my-store-faa0e.firebaseio.com",
+    projectId: "my-store-faa0e",
+    storageBucket: "my-store-faa0e.appspot.com",
+    messagingSenderId: "37391982241"
+  };
+  firebase.initializeApp(config);
 
 const database = firebase.database();
-const googleAuthProvider=new firebase.auth.GoogleAuthProvider();
+//const googleAuthProvider=new firebase.auth.GoogleAuthProvider();
 
-export{ firebase,googleAuthProvider,database as default};
+export{ firebase,database as default};

@@ -2,12 +2,13 @@
 @import './base/base';
 @import './components/box-laout';
 @import './components/buttons';
-@import './components/header';
-@import './components/content-container';
-@import './components/page-header';
+@import '../components/component.DashboardPage/component.DashboardPage';
 @import './components/input-group';
 @import './components/inputs';
-@import './components/form';
+@import './components/content-container';
 @import './components/visibility';
-@import './components/list';
-@import './components/loader';
+@import '../components/component.header/header';
+@import '../components/component.productsList/component.productsList';
+@import '../components/component.loadingPage/component.loadingPage';
+@import '../components/alertModal.component/alertModal.component';
+

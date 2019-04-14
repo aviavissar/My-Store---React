@@ -12,10 +12,17 @@
         margin-bottom: $l-size;
     }
 }
+.list-item h3{
+    margin-top: 0px;
+}
 
+.list-item .pr_add{
+    margin-top: 10px;
+}
 .list-item{
     display: flex;
     flex-direction: column;
+    flex-flow: column;
     border:1px solid darken(#f7f7f7, 7%);
     border-top:none;
     color: $dark-grey;
@@ -25,12 +32,31 @@
     &:hover{
         background: #f7f7f7; 
     }
+    .pr_name { order: 1; }
+    .pr_price { order:2 }
+    .pr_pic { order: 3; }
+    .pr_qun { order: 4 }
+    .pr_add { order: 5 }
+    
+   
     @media (min-width:$desktop-breakpoint) {
         flex-direction: row;
+        flex-flow: row;
         align-items: center;
         justify-content: space-between;
         padding:$m-size;
-
+        
+        .pr_add { order: initial }
+        .pr_name { order: initial; }
+        .pr_price { order:initial }
+        .pr_pic { order: initial; }
+        .pr_qun { order: initial }
+    }
+    img{
+        width: 150px;
+    }
+    .list-item .pr_add{
+        margin-top: initial;
     }
 }
 
@@ -38,7 +64,9 @@
     margin: 0;
     word-break: break-all;
 }
-
+.list-item h3{
+    margin-top: initial;
+}
 .list-item__sub-title{
     color:$grey;
     font-size:1.4rem;    

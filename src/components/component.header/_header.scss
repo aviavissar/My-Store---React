@@ -1,0 +1,49 @@
+.header {
+  background-color: $dark-blue;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $s-size 0;
+}
+
+.header__title {
+  color: white;
+  text-decoration: none;
+  h1 {
+    margin: 0;
+  }
+}
+
+.logo {
+  display: block;
+}
+.logo h1 {
+  margin: -93px 0 3px 0px;
+  border: none;
+  padding: 18px 23px 0 0px;
+}
+.cartBt {
+  position: fixed;
+  top: 46%;
+  right: 11px;
+  width: 30%;
+}
+@media (min-width: $desktop-breakpoint) {
+  .cartBt {
+    position: absolute;
+    top: 60px;
+    width: 200px;
+    left: 40%;
+  }
+  .logo {
+    display: flex;
+    h1 {
+      margin: -17px 0 3px 574px;
+      border: 1px solid black;
+      padding: 10px 20px;
+      width: 178px;
+    }
+  }
+}
